@@ -29,8 +29,8 @@ Full Frame is distributed under the terms of the GNU General Public License v3
 Full Frame is based on Catch Base theme https://catchthemes.com/themes/catch-base/ 
 
 Images used are released under the CC0 license
-Slider Image 1: http://pixabay.com/en/photography-photo-camera-olympus-407218/
-Slider Image 2: http://pixabay.com/en/photographer-photo-camera-camera-455747/
+BJJ Interactive: http://pixabay.com/en/photography-photo-camera-olympus-407218/
+BJJ Interactive: http://pixabay.com/en/photographer-photo-camera-camera-455747/
 Featured Content Background Image: http://www.pexels.com/photo/2286/
 1st Featured Content Image: http://pixabay.com/en/central-park-new-york-city-benches-535645/
 2nd Featured Content Image: http://pixabay.com/en/clock-city-antique-architecture-426079/

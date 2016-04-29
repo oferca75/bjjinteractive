@@ -14,7 +14,7 @@
 	 * fullframe_before_post_container hook
 	 *
 	 * @hooked fullframe_single_content_image - 10
-	 */
+	 */ 
 	do_action( 'fullframe_before_post_container' ); ?>
 
 	<div class="entry-container">
