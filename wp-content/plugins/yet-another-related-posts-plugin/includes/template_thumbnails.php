@@ -29,11 +29,15 @@ if (have_posts()) {
 
 		$output .= "<a class='yarpp-thumbnail' href='" . get_permalink() . "' title='" . the_title_attribute('echo=0') . "'>" . "\n";
 
-
+//Ofer BEGIN
 		if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', get_the_content(), $match)) {
 			$video_id = $match[1];
 		}
-		$post_thumbnail_html =  '<iframe id="_ytid_56590" src="https://www.youtube.com/embed/'.$video_id.'?enablejsapi=1&amp;loop=1&amp;playlist=fvmhXk95ZtA&amp;autoplay=0&amp;cc_load_policy=0&amp;iv_load_policy=1&amp;modestbranding=0&amp;rel=1&amp;showinfo=1&amp;playsinline=0&amp;controls=2&amp;autohide=2&amp;theme=dark&amp;color=red&amp;wmode=opaque&amp;vq=&amp;&amp;enablejsapi=1&amp;origin=http://bjjinteractive.ga" frameborder="0" class="__youtube_prefs__" data-vol="0" allowfullscreen=""></iframe>';
+		global $post;
+	//	$post_thumbnail_html =  '<a href="'.$post->guid.'">'.get_the_content().'</a>';
+
+		$post_thumbnail_html =  '<div class="next-overlay"></div><iframe id="_ytid_56590" src="https://www.youtube.com/embed/'.$video_id.'?enablejsapi=1&amp;loop=1&amp;playlist=fvmhXk95ZtA&amp;autoplay=0&amp;cc_load_policy=0&amp;iv_load_policy=1&amp;modestbranding=0&amp;rel=1&amp;showinfo=1&amp;playsinline=0&amp;controls=2&amp;autohide=2&amp;theme=dark&amp;color=red&amp;wmode=opaque&amp;vq=&amp;&amp;enablejsapi=1&amp;origin=http://bjjinteractive.ga" frameborder="0" class="__youtube_prefs__" data-vol="0" allowfullscreen=""></iframe>';
+		// Ofer END
 		//'<iframe width="420" height="315" src="'.get_the_content().'" frameborder="0" allowfullscreen></iframe>';
 		if ( has_post_thumbnail() ) {
 			if ( $this->diagnostic_generate_thumbnails() )

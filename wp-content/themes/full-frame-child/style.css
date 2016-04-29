@@ -18,3 +18,17 @@
 .home .fluid-width-video-wrapper {
     padding-top: 10% !important;
 }
+.next-overlay {
+    background: transparent;
+    width: 100%;
+    height: 85%;
+    opacity: 0;
+    position: relative;
+    float: left;
+    z-index: 99999;
+}
+
+.yarpp-thumbnails-horizontal .yarpp-thumbnail {
+    margin-top: 30px !important;
+    width: 250px !important;
+}
