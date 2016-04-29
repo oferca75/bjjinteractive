@@ -36,7 +36,7 @@ $getParams="";
     if (isSingleVideoPost($isFirstVideo) && !$isNotSingle ) {
     $getParams .= "&width=600&autoplay=1";
     } else {
-    $getParams .= "&width=300&height=200";
+    $getParams .= "&width=350&height=250";
     //$getParams .= "&start=20";
     $getParams .= "&loop=1";
     }

@@ -11,6 +11,10 @@
 @import url("../full-frame/style.css");
 
 .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
+}
+
+.home .fluid-width-video-wrapper {
+    padding-top: 10% !important;
 }
