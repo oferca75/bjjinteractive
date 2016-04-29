@@ -1090,8 +1090,21 @@ class YARPP {
         }
 
         $this->prep_query($this->current_query->is_feed);
-		$wp_query->posts = get_posts(array( 'category_name' => $this->current_post->post_title ) );
+
+		// Ofer BEGIN
+		$newPosts = array();
+		$catId = get_cat_ID($this->current_post->post_title);
+		$wp_query->posts = get_posts(array( 'category__in' => array($catId),'numberposts' => 40 ) );
+		foreach ($wp_query->posts as $key => $qpost){
+			if ($qpost->post_title !=  $this->current_post->post_title){
+				array_push($newPosts,$qpost);
+			}
+		}
+		$wp_query->posts = $newPosts;
 		$wp_query->post_count = count($wp_query->posts);
+
+		// Ofer END
+
         $wp_query->posts = apply_filters('yarpp_results', $wp_query->posts, array(
             'function'      => 'display_related',
             'args'          => $args,
