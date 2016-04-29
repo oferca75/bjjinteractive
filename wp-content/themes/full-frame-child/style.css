@@ -1,0 +1,16 @@
+/*
+ Theme Name:     Full Frame Child Theme
+ Theme URI:      http://www.elegantthemes.com/gallery/foxy/
+ Description:    Full Frame Child Theme
+ Author:         Elegant Themes
+ Author URI:     http://www.elegantthemes.com
+ Template:       full-frame
+ Version:        1.0.0
+*/
+
+@import url("../full-frame/style.css");
+
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+    width: auto;
+    height: auto;
+}

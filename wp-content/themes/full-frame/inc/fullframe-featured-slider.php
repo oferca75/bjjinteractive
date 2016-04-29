@@ -131,7 +131,26 @@ function fullframe_demo_slider( $options ) {
 											<p>Learn BJJ Techniques With Interactive Videos</p>
 										</div>   
 									</div>             
-								</article><!-- .slides --> ';
+								</article>
+								
+								<article class="post hentry slides demo-image displaynone">
+									<figure class="BJJ Interactive">
+										<a title="BJJ Interactive" href="'. esc_url( home_url( '/' ) ) .'">
+											<img src="'. get_template_directory_uri() . '/images/gallery/slider3-1680x720.jpg" class="wp-post-image" alt="BJJ Interactive" title="BJJ Interactive">
+										</a>
+									</figure>
+									<div class="entry-container">
+										<header class="entry-header">
+											<h1 class="entry-title">
+												<a title="BJJ Interactive" href="#"><span>BJJ Interactive</span></a>
+											</h1>
+											</header>
+										<div class="entry-content">
+											<p>Learn BJJ Techniques With Interactive Videos</p>
+										</div>   
+									</div>             
+								</article>
+								<!-- .slides --> ';
 	return $fullframe_demo_slider;
 }
 endif; // fullframe_demo_slider
