@@ -33,12 +33,12 @@
 
 function preyoutube_function($content,$isFirstVideo,$isNotSingle, $atts) {
 $getParams="";
-    if (isSingleVideoPost($isFirstVideo) && !$isNotSingle ) {
-    $getParams .= "&width=600&autoplay=1";
-    } else {
-    $getParams .= "&width=350&height=250";
-    //$getParams .= "&start=20";
+    if ($isNotSingle ) {
+    $getParams .= "&width=300&height=200";
     $getParams .= "&loop=1";
+
+    } else {
+    $getParams .= "&width=600&autoplay=1";
     }
      if ($content){
         return $content.$getParams;
@@ -51,7 +51,8 @@ $getParams="";
 }/**
 * @param $isFirstVideo
  * @return bool
-*/function isSingleVideoPost($isFirstVideo){
+*/
+function isSingleVideoPost($isFirstVideo){
 $category_name = $GLOBALS['wp_query']->queried_object->name;
 foreach ($GLOBALS['wp_query']->posts as $post){
     if ($post->post_title == $category_name){
@@ -1033,14 +1034,16 @@ public static $vidCount = 0;
 /**
  * @return bool
 */public static function isFirstVideo(){
-return ($GLOBALS['wp_the_query']->is_single && self::$vidCount == 0);
+$is_single_or_page=$GLOBALS['wp_the_query']->is_single || $GLOBALS['wp_the_query']->is_page;
+return ($is_single_or_page && self::$vidCount == 0);
 }
 
 public static function isNotSingle(){
   $isSearchTemplate = strpos($GLOBALS["template"],"search.php") > 0;
   $isHomeTemplate = strpos($GLOBALS["template"],"home.php") > 0;
+  $isIndexTemplate = strpos($GLOBALS["template"],"index.php") > 0;
   $isArchiveTemplate = strpos($GLOBALS["template"],"archive.php") > 0;
-  return !$_GET["ov"] && ( $isSearchTemplate || $isHomeTemplate || $isArchiveTemplate || self::isPosition());
+  return $isSearchTemplate || $isHomeTemplate || $isArchiveTemplate || $isIndexTemplate;// || self::isPosition();
 }
 
 public static function isPosition(){

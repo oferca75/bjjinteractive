@@ -21,6 +21,8 @@
 		do_action( 'fullframe_before_entry_container' ); ?>
 
 		<div class="entry-container">
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><div class="next-overlay"></div></a>
+
 			<header class="entry-header">
 				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
