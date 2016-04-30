@@ -24,7 +24,7 @@
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><div class="next-overlay"></div></a>
 
 			<header class="entry-header">
-				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php echo the_title(); ?></a></h1>
 
 				<?php if ( 'post' == get_post_type() ) : ?>
 				

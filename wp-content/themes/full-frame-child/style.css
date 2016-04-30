@@ -18,7 +18,6 @@
     width: 600px !important;
     height: 350px !important;
 }
-.home .entry-content>p>.fluid-width-video-wrapper iframe,.home .entry-content>p>.fluid-width-video-wrapper object, .home .entry-content>p>.fluid-width-video-wrapper embed,
 .archive .entry-content>p>.fluid-width-video-wrapper iframe,.archive .entry-content>p>.fluid-width-video-wrapper object, .archive .entry-content>p>.fluid-width-video-wrapper embed
 {
     width: 300px !important;
@@ -67,4 +66,16 @@
 
 .home article{
     margin-top:25px;
+}
+
+.home .yarpp-related>h3{
+    display:none !important;
+}
+
+.home .entry-header{
+    display: none !important;
+}
+
+.home .yarpp-thumbnail-title{
+    margin-top:140px !important;
 }

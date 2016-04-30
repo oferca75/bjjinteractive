@@ -31,14 +31,16 @@
 
 
 
-function preyoutube_function($content,$isFirstVideo,$isNotSingle, $atts) {
+function preyoutube_function($content,$isFirstVideo,$isNotSingle, $atts,$autoplay = "1") {
 $getParams="";
     if ($isNotSingle ) {
     $getParams .= "&width=300&height=200";
     $getParams .= "&loop=1";
 
     } else {
-    $getParams .= "&width=600&autoplay=1";
+      $isIndexTemplate = strpos($GLOBALS["template"],"index.php") > 0;
+    $autoplay == $isIndexTemplate ? "0" : $autoplay;
+    $getParams .= "&width=600&autoplay=$autoplay";
     }
      if ($content){
         return $content.$getParams;

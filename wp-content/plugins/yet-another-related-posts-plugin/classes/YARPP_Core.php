@@ -1093,7 +1093,9 @@ class YARPP {
 
 		// Ofer BEGIN
 		$newPosts = array();
-		$catId = get_cat_ID($this->current_post->post_title);
+		$postTitle = $this->current_post->post_title;
+		$postTitle = $postTitle == "Front" ? "Top Positions" : $postTitle;
+		$catId = get_cat_ID($postTitle);
 		$wp_query->posts = get_posts(array( 'category__in' => array($catId),'numberposts' => 40 ) );
 		foreach ($wp_query->posts as $key => $qpost){
 			if ($qpost->post_title !=  $this->current_post->post_title){
