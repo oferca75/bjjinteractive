@@ -20,14 +20,23 @@ if ( empty($thumbnails_default) )
 	$thumbnails_default = get_header_image();
  $dimensions = $this->thumbnail_dimensions();
 
-$output .= '<h3>' . $thumbnails_heading . '</h3>' . "\n";
+$postTitle = get_the_title();
+if (endsWith($postTitle, "sitions")) {
+	$str = str_replace("Positions", "", $postTitle);
+	$dispStr = "Positions from the " . $str;
+} else {
+		$dispStr =' Next Moves From The ' . eliminateKeywords($postTitle);
+
+}
+;
+$output .= '<h3>' .$dispStr. '</h3>' . "\n";
 
 if (have_posts()) {
 	$output .= '<div class="yarpp-thumbnails-horizontal">' . "\n";
 	while (have_posts()) {
 		the_post();
 
-		$output .= "<a class='yarpp-thumbnail' href='" . get_permalink() . "' title='" . the_title_attribute('echo=0') . "'>" . "\n";
+		$output .= "<a class='yarpp-thumbnail' href='" . get_permalink() . "' title='" . the_title_attribute('echo=0') . "'><div class='next-overlay'></div>" . "\n";
 
 //Ofer BEGIN
 		if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', get_the_content(), $match)) {

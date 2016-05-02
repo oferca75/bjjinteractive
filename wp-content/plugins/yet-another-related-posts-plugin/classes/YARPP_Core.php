@@ -1094,11 +1094,13 @@ class YARPP {
 		// Ofer BEGIN
 		$newPosts = array();
 		$postTitle = $this->current_post->post_title;
-		$postTitle = $postTitle == "Front" ? "Top Positions" : $postTitle;
+		$numberposts = $postTitle == "Front" ? 7 : 40;
+			$postTitle = $postTitle == "Front" ? "Top Positions" : $postTitle;
+
 		$catId = get_cat_ID($postTitle);
-		$wp_query->posts = get_posts(array( 'category__in' => array($catId),'numberposts' => 40 ) );
+		$wp_query->posts = get_posts(array( 'category__in' => array($catId),'numberposts' => $numberposts ) );
 		foreach ($wp_query->posts as $key => $qpost){
-			if ($qpost->post_title !=  $this->current_post->post_title){
+			if ($qpost->post_title !=  $postTitle){
 				array_push($newPosts,$qpost);
 			}
 		}
