@@ -99,54 +99,54 @@ function fullframe_demo_slider( $options ) {
 	$fullframe_demo_slider ='
 								<article class="post hentry slides demo-image displayblock">
 									<figure class="slider-image">
-										<a title="BJJ Interactive" href="'. esc_url( home_url( '/' ) ) .'">
-											<img src="'.get_template_directory_uri().'/images/gallery/slider1-1680x720.jpg" class="wp-post-image" alt="BJJ Interactive" title="BJJ Interactive">
+										<a title="Learn BJJ Techniques" href="'. esc_url( home_url( '/' ) ) .'">
+											<img src="'.get_template_directory_uri().'/images/gallery/slider1-1680x720.jpg" class="wp-post-image" alt="Learn BJJ Techniques" title="Learn BJJ Techniques">
 										</a>
-									</figure>
+									</figure>  
 									<div class="entry-container">
 										<header class="entry-header">
 											<h1 class="entry-title">
-												<a title="BJJ Interactive" href="#"><span>BJJ Interactive</span></a>
+												<a title="Learn BJJ Techniques" href="#"><span>Learn BJJ Techniques</span></a>
 											</h1>
 											</header>
 										<div class="entry-content">
-											<p>Explore Actual Fight Flow</p>
+											<p>Simple And Intuitive Guide</p>
 										</div>   
 									</div>             
 								</article><!-- .slides --> 	
 								
 								<article class="post hentry slides demo-image displaynone">
-									<figure class="BJJ Interactive">
-										<a title="BJJ Interactive" href="'. esc_url( home_url( '/' ) ) .'">
-											<img src="'. get_template_directory_uri() . '/images/gallery/slider2-1680x720.jpg" class="wp-post-image" alt="BJJ Interactive" title="BJJ Interactive">
+									<figure class="Learn BJJ Techniques">
+										<a title="Learn BJJ Techniques" href="'. esc_url( home_url( '/' ) ) .'">
+											<img src="'. get_template_directory_uri() . '/images/gallery/slider2-1680x720.jpg" class="wp-post-image" alt="Learn BJJ Techniques" title="Learn BJJ Techniques">
 										</a>
 									</figure>
 									<div class="entry-container">
 										<header class="entry-header">
 											<h1 class="entry-title">
-												<a title="BJJ Interactive" href="#"><span>BJJ Interactive</span></a>
+												<a title="Learn BJJ Techniques" href="#"><span>Learn BJJ Techniques</span></a>
 											</h1>
 											</header>
 										<div class="entry-content">
-											<p>Learn BJJ Techniques With Interactive Videos</p>
+											<p>Simple And Intuitive Guide</p>
 										</div>   
 									</div>             
 								</article>
 								
 								<article class="post hentry slides demo-image displaynone">
-									<figure class="BJJ Interactive">
-										<a title="BJJ Interactive" href="'. esc_url( home_url( '/' ) ) .'">
-											<img src="'. get_template_directory_uri() . '/images/gallery/slider3-1680x720.jpg" class="wp-post-image" alt="BJJ Interactive" title="BJJ Interactive">
+									<figure class="Learn BJJ Techniques">
+										<a title="Learn BJJ Techniques" href="'. esc_url( home_url( '/' ) ) .'">
+											<img src="'. get_template_directory_uri() . '/images/gallery/slider3-1680x720.jpg" class="wp-post-image" alt="Learn BJJ Techniques" title="Learn BJJ Techniques">
 										</a>
 									</figure>
 									<div class="entry-container">
 										<header class="entry-header">
 											<h1 class="entry-title">
-												<a title="BJJ Interactive" href="#"><span>BJJ Interactive</span></a>
+												<a title="Learn BJJ Techniques" href="#"><span>Learn BJJ Techniques</span></a>
 											</h1>
 											</header>
 										<div class="entry-content">
-											<p>Learn BJJ Techniques With Interactive Videos</p>
+											<p>Simple And Intuitive Guide</p>
 										</div>   
 									</div>             
 								</article>

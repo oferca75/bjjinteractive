@@ -93,3 +93,9 @@
 .archive .entry-content p:nth-child(2){
     display:none;
 }
+#breadcrumb-list{
+    background: none;
+}
+#comment, .breadcrumb-current {
+    background:#DDDDDD !important;
+}

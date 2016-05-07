@@ -6,18 +6,27 @@
  */
 function eliminateKeywords($postTitle)
 {
+    $postTitle = trim($postTitle);
+    $words = array("Position", "Positions");
+    $postTitle = eliminate($postTitle, $words);
     $words = array("Top", "Bottom");
+    $postTitle = eliminate($postTitle, $words);
+    return $postTitle;
+}
+
+/**
+ * @param $postTitle
+ * @param $words
+ * @return array
+ */
+function eliminate($postTitle, $words)
+{
     foreach ($words as $word) {
         if (endsWith($postTitle, $word)) {
             $postTitle = str_replace($word, "", $postTitle);
         }
     }
-//    if (endsWith($postTitle,"ass")) {
-//        $postTitle = str_replace("pass", "", $postTitle);
-//        $postTitle = str_replace("Pass", "", $postTitle);
-//    }
-//    } 
-    return $postTitle;
+    return trim($postTitle);
 }
 
 function endsWith($haystack, $needle)

@@ -20,18 +20,18 @@ if ( empty($thumbnails_default) )
 	$thumbnails_default = get_header_image();
  $dimensions = $this->thumbnail_dimensions();
 
-$postTitle = get_the_title();
-if (endsWith($postTitle, "sitions")) {
-	$str = str_replace("Positions", "", $postTitle);
-	$dispStr = "Positions from the " . $str;
+
+
+if (have_posts()) {
+	$postTitle = get_the_title();
+if (endsWith($postTitle, "sitions") || endsWith($postTitle, "sition")) {
+	$dispStr = "Attacks And Defences From The " . eliminateKeywords($postTitle);
 } else {
-		$dispStr =' Next Moves From The ' . eliminateKeywords($postTitle);
+		$dispStr =' Following ' . eliminateKeywords($postTitle)." Technique You can";
 
 }
 ;
-$output .= '<h3>' .$dispStr. '</h3>' . "\n";
-
-if (have_posts()) {
+$output .= '<h3>' .$dispStr. ':</h3>' . "\n";
 	$output .= '<div class="yarpp-thumbnails-horizontal">' . "\n";
 	while (have_posts()) {
 		the_post();
