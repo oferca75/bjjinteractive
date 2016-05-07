@@ -1115,21 +1115,21 @@ class YARPP {
             'related_ID'    => $reference_ID)
         );
 
-        $related_query = $wp_query; // backwards compatibility
-        $related_count = $related_query->post_count;
-
-        $output .= "<div class='";
-        if ($domain === 'website') {
-            $output .= "yarpp-related";
-        } else {
-            $output .= "yarpp-related-{$domain}";
-        }
-
-        if ($related_count < 1) {
-            $output .= " yarpp-related-none";
-        }
-
-        $output .= "'>\n";
+//        $related_query = $wp_query; // backwards compatibility
+//        $related_count = $related_query->post_count;
+//
+//        $output .= "<div class='";
+//        if ($domain === 'website') {
+//            $output .= "yarpp-related";
+//        } else {
+//            $output .= "yarpp-related-{$domain}";
+//        }
+//
+//        if ($related_count < 1) {
+//            $output .= " yarpp-related-none";
+//        }
+//
+//        $output .= "'>\n";
 
         if ($domain === 'metabox') {
             include(YARPP_DIR.'/includes/template_metabox.php');

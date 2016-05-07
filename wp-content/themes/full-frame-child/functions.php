@@ -6,11 +6,14 @@
  */
 function eliminateKeywords($postTitle)
 {
+    if (str_word_count($postTitle) > 2) {
     $postTitle = trim($postTitle);
     $words = array("Position", "Positions");
     $postTitle = eliminate($postTitle, $words);
-    $words = array("Top", "Bottom");
-    $postTitle = eliminate($postTitle, $words);
+
+        $words = array("Top", "Bottom");
+        $postTitle = eliminate($postTitle, $words);
+    }
     return $postTitle;
 }
 
