@@ -22,3 +22,4 @@ if ( !defined( 'FULLFRAME_THEME_VERSION' ) ) {
  * Implement the core functions
  */
 require get_template_directory() . '/inc/fullframe-core.php';
+

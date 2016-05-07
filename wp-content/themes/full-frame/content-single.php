@@ -19,7 +19,7 @@
 
 	<div class="entry-container">
 		<header class="entry-header">
-			<h1 class="entry-title"><?php $title = eliminateKeywords(get_the_title()); echo $title; ?></h1>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 
 			<?php fullframe_entry_meta(); ?>
 		</header><!-- .entry-header -->

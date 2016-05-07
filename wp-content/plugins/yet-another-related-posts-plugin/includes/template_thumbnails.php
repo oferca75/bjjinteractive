@@ -19,19 +19,25 @@ extract( $this->parse_args( $args, $options ) );
 if ( empty($thumbnails_default) )
 	$thumbnails_default = get_header_image();
  $dimensions = $this->thumbnail_dimensions();
-
+if (!function_exists("eliminateKeywords")){
+	function eliminateKeywords($str)
+	{return $str;}
+}
 
 
 if (have_posts()) {
 	$postTitle = get_the_title();
-if (endsWith($postTitle, "sitions") || endsWith($postTitle, "sition")) {
-	$dispStr = "Attacks And Defences From The " . eliminateKeywords($postTitle);
-} else {
-		$dispStr =' Following ' . eliminateKeywords($postTitle)." Technique You can";
+	if ($postTitle !== "Front") {
 
-}
-;
-$output .= '<h3>' .$dispStr. ':</h3>' . "\n";
+		$dispStr = "<img class='next-arrow' src='".get_stylesheet_directory_uri()."/img/ra1.png'/>";
+		if ((endsWith($postTitle, "sitions") || endsWith($postTitle, "sition"))) {
+			$dispStr .= "Attacks And Defences From The " . eliminateKeywords($postTitle);
+		} else {
+			$dispStr .= ' Following ' . eliminateKeywords($postTitle) . " Technique";
+
+		};
+		$output .= '<h3>' . $dispStr . ':</h3>' . "\n";
+	}
 	$output .= '<div class="yarpp-thumbnails-horizontal">' . "\n";
 	while (have_posts()) {
 		the_post();
